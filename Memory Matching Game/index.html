@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Memory Matching ....
+    </title>    
+</head>
+<body>
+    <div class="container">
+    <header>
+        <h1 style="font-family: cursive;font-size: 5em;">Memory Matching Game</h1>
+        <hr>
+    </header>
+    <section class="Score_card">
+        <br>
+        <h1 style="font-size: xx-large;font-family: cursive;">Score_card</h1>
+        <h2 style="font-family: cursive;">No. of moves<span class="number_of_moves">0</span></h2>
+        <br>
+        <div class="timer_div">
+            <span class="timer_class">Timer 00:00</span>
+        </div>
+        <div class="reset">
+            <button class="btn resetbtn">reset</button>
+        </div>
+        <h1 id="level"></h1>
+    </section>
+    <section class="result">
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 style="font-family: cursive;font-weight: bolder;">You won!!!</h1> 
+                <br><br>
+                <button class="playagain">Play next level</button>
+                <br>
+                <h1 id="stats"></h1>
+                <h1 id="stats1"></h1>
+                
+            </div>
+        </div>
+    </section>
+    <section class="result">
+        <div id="modal1" class="modal1">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>You won!!!</h1> 
+                <br><br>
+                <h1>🎉Congratulations 🎉</h1>
+                <h1>YOU REACH THE END OF THE GAME😄🎉🎉</h1>
+                <h1 id="stats2"></h1>
+                <h1 id="stats3"></h1>
+                
+            </div>
+        </div>
+    </section>
+    <ul class="deck"></ul>  
+</div>  
+</body>
+<link rel="stylesheet" href="style.css">
+<script src="javascript.js"></script>
+</html>

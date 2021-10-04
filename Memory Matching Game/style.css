@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box  ;
+}
+body{
+    margin: 0;
+    font-size: 65%;
+    background:url(img/csk.jpg);
+    background-image:no-repeat;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+.flex-1{
+    display: flex;
+}
+.flex-0{
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    padding: 4em;
+}
+.flex-01,
+.flex-02{
+    margin: 5em;
+}
+.moves{
+    background-color: cornsilk;
+    margin: 1em;
+    border-radius: 2em;
+}
+.resetbtn,.card{
+    cursor: pointer;
+    padding: 1em;
+    margin-bottom: 2em;
+    color: #FFF;
+    height: 4em;
+    width: 5em;
+    background-color: rgb(255, 0, 0);
+    
+    border-radius: 5px;
+    border: none;
+}
+.resetbtn{
+    font-size: 1.2em;
+    font-weight: bolder;
+    width: 20em;
+    color: yellow;
+    background-color: darkblue;
+}
+.resetbtn:hover{
+    background-color: rgb(34, 238, 51);
+    color: #000;
+}
+h1{
+    font-size: 3em;
+    font-weight: 400;
+}
+h2{
+    font-size: 2.5em;
+    font-weight: 400;
+}
+p{
+    font-size: 1.5em;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.7em;
+}
+ul > li{
+    list-style: none;
+}
+.score_card{
+    margin: 0.2em;
+    padding: 1em 0 2em;
+    font-size: 1.5em;
+}
+.number_of_moves{
+    font-size: 1.5em;
+
+    padding: 0.5em;
+    color: red;
+    font-weight: bolder;
+}
+.timer_div{ 
+    height: 3em;
+    font-size: 2.5em; 
+    background-color: #000;
+    color: #FFF;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+   
+}
+.timer_class{
+    font-size: 1em;
+    
+}
+
+/* Deck */
+.deck{
+    background: linear-gradient(to bottom,#FFA500,#FFFF00);
+    border-radius: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 35em;
+    margin-bottom: 6em;
+    padding: 0.5em;
+    width: 35em;
+   
+}
+
+.deck ,
+.card{
+    box-shadow: 5px 2px 20px 0 rgba(95, 157, 219, 0.5);
+
+}
+.card{
+    background: rgb(238, 34, 61);
+    border-radius: 0.5em;
+    height: 6em;
+    width: 6em;
+   
+}
+
+img{
+    user-select: none;
+    width: 6em;
+}
+.deck img{
+    visibility: hidden;
+}
+.deck .card.flip{
+    background: #fff;
+    cursor: default;
+    transform: rotateY(360deg);
+    transition: transform 0.3s linear;
+    pointer-events: none;
+}
+.flip img{
+    visibility: visible;
+    background: #FFF;
+}
+.deck .card.match {
+       background: #39d;
+       visibility: visible;
+       cursor: default;
+       animation: pulse 1s;
+
+}
+.match img{
+    background: rgb(219, 228, 227);
+}
+/* Result */
+.modal,
+.modal1,
+.modal2{
+    display: none;
+    position: fixed;
+    z-index: 90;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color:rgb(34, 224, 238) ;
+
+}
+#stats,
+#stats1,
+#stats2,
+#stats3{
+    font-family: cursive;
+    font-weight: bolder;
+    
+}
+.modal_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 5% auto;
+    border: 0 0.8em solid #fc4;
+    padding-right: 2em;
+    width:80% ;
+}
+.close{
+    align-self: flex-end;
+    color: #000;
+    font-size: 5em;
+}
+.close:hover,
+.close:focus{
+    color: #5cf;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-img{
+    display: inline-block;
+    margin: 1em 0 1em;
+    width: 20em;
+}
+.stats,.stats1{
+    font-size: 600;
+    font-family: cursive;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.playagain{
+    background: rgb(34, 238, 51);
+    margin-bottom: 1em;
+    width: 10em;
+    border-radius: 1em;
+    height: 5em;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale();
+    }
+    
+}
+@media screen  and (min-width:550px){
+    .deck{
+        height: 50em;
+        width: 50em;
+        padding: 2em;
+    }
+    .card{
+        height: 10em;
+        width: 10em;
+    }
+    .deck img{
+        width: 9em;
+    }
+    .flex-0{
+        flex-direction: column;
+    }
+}
